@@ -1,0 +1,83 @@
+/* .chat-window 不需要修改 */
+.chat-window {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  height: 350px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+/* .friend-list 样式不变 */
+.friend-list {
+  width: 120px;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.friend-list h3 {
+  margin-top: 0;
+}
+
+.friend-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.friend-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.friend-list li:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* chat-box 样式，设置 flex-grow 使其自动扩展 */
+.chat-box {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;  /* 保证内容垂直排列 */
+}
+
+/* chat-header 修正对齐 */
+.chat-header {
+  display: flex;
+  justify-content: space-between;  /* 左右两边元素分开对齐 */
+  align-items: center;  /* 垂直居中对齐 */
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  width: 100%;  /* 确保占满全宽 */
+}
+
+/* messages 区域，保证滚动和显示 */
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;  /* 确保消息列表垂直排列 */
+}
+
+/* input-area 样式 */
+.input-area {
+  padding: 10px;
+}
+
+.input-area input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
